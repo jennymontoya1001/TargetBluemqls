@@ -1,0 +1,256 @@
+/*los estilos especificados en el selector root 
+afectan al documento raiz html*/
+:root{
+
+  /*custom properties - variables*/
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%); 
+    --Dark-gray: hsl(0, 0%, 59%);
+    --varLetra:white;
+}
+
+
+h1{
+    color: var(--Very-dark-desaturated-blue);
+    margin: 0;
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+/*span 26*/
+h1 span{
+    color: #9d9ca3;
+    font-weight: 400; /*peso o grueso de la letra*/
+    margin-left: 5px;
+}
+
+h2{
+  color: #9d9ca3;
+  font-weight: 400; /*peso o grueso de la letra*/
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.body{
+    background-color: var(--Dark-cyan);
+    background-image: url('./images//bg-pattern-top.svg'),  url('./images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: left -40% top 140% , right -50% bottom 170%;
+    padding: 50px;
+    font-family: 'Kumbh Sans', sans-serif;
+    /* display permite definir el tipo de contenedor flexible*/
+    /*flex el contenedor se comporta como un bloque, es decir, 
+    ocupa todo el espacio horizontal disponible
+    permite alinear*/
+    display: flex; 
+}
+
+/*main clase card*/
+.card{
+    text-align: center;
+    border-radius: 20px;
+    background: white  url('./images/bg-pattern-card.svg') repeat-x;
+    /*overflow controla el desbordamiento, si recortar el contenido excedente o no
+    hidden indicamos recortar el contenido
+    scroll permite usar barra de deplazamiento*/
+    overflow: hidden; 
+    padding-top: 80px;
+    max-width: 375px;
+    /*flex-shrink especifica cómo se encogerá los elementos respecto al resto de los elementos
+    flexibles del contenedor
+    En este caso con valor cero NO se hace pequeño para nada*/
+    flex-shrink: 0;
+    /*flex-grow especifica cuánto crecerá el elemento respecto al resto de elemtnos flexibles
+    del contenedor
+    En este caso toma el espacio que pueda*/
+    flex-grow: 1; 
+    margin-left: 10%; 
+}
+
+.image{
+ border-radius: 50%;
+ border: 8px solid white;
+}
+
+/*80k 803k 1.4k
+la clase de followes, likes y photos
+*/
+.social {
+  /*flex el contenedor se comporta como un bloque, es decir, 
+    ocupa todo el espacio horizontal disponible*/
+    display: flex;    
+    /*space-evenly toma todo el espacio disponible en la caja y pone
+    el mismo espacio entre cada uno de los elementos*/
+    justify-content: space-evenly; 
+    border-top: 1px solid #e8e8e8;
+    padding:  10px 0;
+    
+}
+
+/*80k 803k 1.4k*/
+.social h3{
+  font-size: 22px;
+  margin-top: 60px;
+}
+
+/*followes, likes y photos*/
+.social h3 small{
+    margin-top: 8px;
+    display: block;
+    color: #9d9ca3;
+    font-weight: 400; 
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+
+/*Formulario*/
+/*Div contenedor formulario*/
+.contenedor-Formulario{
+  width: 40%;   
+  margin-left: 5%;
+}
+
+/*Join our community*/
+.form h2{
+  font-size: 24px;
+  color: var(--varLetra);
+  text-align: center;
+}
+
+/*inputs y select(lista de generos)*/
+.form input, select{
+  /*inline-size define el tamaño horizontal o 
+  vertical de un  bloque de elementos*/
+    inline-size: 100%; 
+    border:1px solid var(--varColor) ;
+
+    /*box-sizing: border-box El valor border-box en el box-sizing hace 
+    que el padding y el border pasen a formar parte del cálculo 
+    del ancho de la caja y no lo suman posteriormente.*/
+    box-sizing: border-box;
+    color:white;
+    background-color:#251F24 ;
+    border-radius: 8px;
+    /*padding-inline define el relleno en línea de inicio y final de un elemento*/
+    padding-inline: 16px;
+    /*padding-block define el relleno de inicio y final del bloque de un elemento*/
+    padding-block: 12px;
+    color:var(--varLetra);
+    font-size: 16px;
+    /*define el margen final de bloque*/
+    margin-block-end:24px
+}
+
+/*estilo al botón*/
+.form input[type="submit"]{
+  background: #157EFB;
+  border: none;
+}
+
+
+.form label{
+ color: var(--varLetra);
+ font-size: 18px;
+}
+
+/*textarea del form*/
+#msm{
+  /*define el tamaño horizontal o vertical de un bloque de elementos*/
+inline-size: 100%;
+border-radius: 5px;
+display: block;
+margin-bottom: 10px;
+
+}
+
+/*medias queries*/
+/*para resoluciones menores a 640 píxeles de ancho (móviles).*/
+@media screen and (max-width: 640px) {
+
+
+ body{
+   margin: 0;
+   padding: 0;
+   /*position: absolute no estará dentro del flujo normal de la página y tomará como 
+   referencia la ventana del navegador*/
+   position: absolute;
+ }
+ 
+ /*main card*/
+  .card {
+    background-image: url('./images/bg-pattern-top.svg'),  url('./images/bg-pattern-bottom.svg');  
+    /*inline-flex el contenedor se comporta como un elemento en-línea
+    ocupa sólo el espacio horizontal necesario y pueden colocarse 
+    unos detrás de otros en la misma línea*/
+    display: inline-flex; 
+    padding-top: 0%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  /*26*/
+  h1 span{
+    display: none;
+  }
+
+  /*80, 803, 1.4*/
+.social h3{
+  display: none;
+}
+
+/*london*/
+main h2{
+display: none;
+}
+
+/*Victor Crest*/
+main h1{
+  font-size: 16px;
+}
+
+/*div contenere form*/
+.contenedor-Formulario{
+ width: 90%;  
+ margin-top: 40%;
+ margin-right: auto;
+ margin-left: auto;
+ /*position absolute no estará dentro del flujo normal de la página y tomará como 
+   referencia la ventana del navegador*/
+ position: absolute;
+ /*define cómo el navegador distribuye el espacio entre y 
+ alrededor de los items flex*/
+ justify-content: center;
+}
+
+/*Join our community*/
+form h2{
+  display: none;
+}
+
+
+
+
+}
+
+/*para resoluciones entre 640 píxeles y 1280 píxeles de ancho (tablets).*/
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+
+
+  
+}  
+
+
+/*para resoluciones mayores a 1280 píxeles (desktop).*/
+@media screen and (min-width: 1280px) {
+
+  .card{
+    text-align: center;
+    border-radius: 0%;
+    background: white  url('./images/bg-pattern-card.svg') repeat-x;
+    max-width: 375%;
+}
+ 
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!--estamos indicando que el nuevo ancho de la pantalla es el ancho 
+    del dispositivo, por lo que el aspecto del viewport se va a adaptar 
+    consecuentemente
+  Con esto conseguiremos preparar nuestra web para dispositivos móviles 
+  y prepararnos para la introducción de reglas media query en el documento 
+  CSS.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Target app</title>
+
+
+</head>
+
+<body class="body">
+  <!-- cabeceras h1 h2 h3 -->
+  <main class="card">
+    <img class="image" src="./images/image-victor.jpg" alt="" srcset="">
+    <h1>
+      Victor Crest
+      <!-- div y span no tienen ningún significado especial, 
+        sólo que la primera se define como un elemento bloque 
+        y la segunda es un elemento de línea. -->
+      <span>26</span>
+    </h1>
+
+    <h2>London</h2>
+
+    <div class="social">
+      <h3>80K
+        <small>Followers</small>
+      </h3>
+
+
+      <h3>803K
+        <small>Likes</small>
+      </h3>
+
+      <h3>1.4K
+        <small>Photos</small>
+      </h3>
+    </div>
+  </main>
+
+
+  <div class="contenedor-Formulario">
+    <div class="content">
+
+      <form action="" class="form" id="form" onsubmit="">
+        <!--functionSubmit(event)-->
+        <h2>Join our community</h2>
+        <input id="inputName" type="text" placeholder="Enter name" required>
+        <input id="email" type="Email" name="email" placeholder="Enter email" required>
+        <select name="gender" id="gender" value="Gender">
+          <option value="0">Gender</option>
+          <option value="F">Female</option>
+          <option value="M">Male</option>
+          <option value="O">Other</option>
+        </select>
+        <label for="">Menssage</label>
+        <textarea id="msm" cols="30" rows="10"></textarea>
+        <input type="submit" value="Submit" id="submit">
+      </form>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
